@@ -1,1 +1,18 @@
-<div>Library Management System is in-progress</div>
+
+<mat-toolbar color="primary">
+  <span>Library Management System</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav [mode]="'side'" [opened]="true" class="col-12 col-sm-2 col-md-2 col-lg-2">
+    <!-- Sidenav content goes here -->
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Dashboard</a>
+      <a mat-list-item routerLink="/borrow">Borrow</a>
+      <a mat-list-item routerLink="/return">Return</a>
+      <a mat-list-item routerLink="/about">About</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
