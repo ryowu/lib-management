@@ -38,3 +38,22 @@ body {
   color: rgb(155, 155, 155);
   text-transform: uppercase;
 }
+
+.label-secondary {
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+}
+
+.mat-icon {
+  vertical-align: middle;
+}
+
+.icon-secondary {
+  color: rgb(100, 100, 100);
+}
+
+.aligned-with-icon {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px; /* optional */
+}
