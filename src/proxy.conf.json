@@ -1,0 +1,10 @@
+{
+  "/graphql": {
+    "target": "https://lib-mgr-db.vercel.app",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/graphql": "/graphql"
+    },
+    "secure": false
+  }
+}
