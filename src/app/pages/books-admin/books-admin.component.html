@@ -6,5 +6,18 @@
         </div>
     </div>
     <hr>
-    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books">
+                <td>{{ book.id }}</td>
+                <td>{{ book.name }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

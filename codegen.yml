@@ -1,0 +1,36 @@
+overwrite: true
+schema: "https://lib-mgr-db.vercel.app/graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withComponent: false
+      ngModule: "app"
+      operationSuffix: "GQL"
+      customFetch: "@apollo-angular/common"
+      additionalImports:
+        - "import * as gql from 'graphql-tag';"
+      customHelpers:
+        gqlToTypes: "import { TypedDocumentNode } from '@graphql-typed-document-node/core';"
+      namingConvention:
+        typeNames: change-case#pascalCase
+        enumValues: keep
+        transformUnderscore: true
+        skipTypename: true
+      apolloAngularVersion: 2
+      generateSchemaTypes: true
+      generateDocuments: true
+      documents: 
+        - src/app/**/*.graphql
+        - schema.graphql
+      globalNamespace: GraphQLTypes
+      excludeQueries: 
+        - "**/ExcludeQuery.graphql"
+      excludeMutations:
+        - "**/ExcludeMutation.graphql"
+      excludeSubscriptions:
+        - "**/ExcludeSubscription.graphql"
