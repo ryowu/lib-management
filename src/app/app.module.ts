@@ -12,13 +12,15 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
+import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AboutComponent
+    AboutComponent,
+    BooksAdminComponent
   ],
   imports: [
     BrowserModule,
