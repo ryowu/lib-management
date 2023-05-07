@@ -12,10 +12,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
+import { BorrowComponent } from './pages/borrow/borrow.component';
+import { ReturnComponent } from './pages/return/return.component';
 
 @NgModule({
 	declarations: [
@@ -23,6 +27,8 @@ import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
 		DashboardComponent,
 		AboutComponent,
 		BooksAdminComponent,
+  BorrowComponent,
+  ReturnComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -30,7 +36,9 @@ import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
 		BrowserAnimationsModule,
 		MatButtonModule,
 		MatCardModule,
+		MatFormFieldModule,
 		MatIconModule,
+		MatInputModule,
 		MatListModule,
 		MatPaginatorModule,
 		MatProgressSpinnerModule,
