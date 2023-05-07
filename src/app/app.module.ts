@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +31,7 @@ import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
     MatCardModule,
     MatIconModule,
     MatListModule,
+    MatPaginatorModule,
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule

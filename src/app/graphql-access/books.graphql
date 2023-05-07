@@ -1,8 +1,12 @@
-query AllBooks {
-  allBooks {
-    nodes {
-      id
-      name
-    }
-  }
+query AllBooks($first: Int, $offset: Int) {
+	books: allBooks(first: $first, offset: $offset) {
+		nodes {
+			id
+			name
+			author
+			publishDate
+			status
+		}
+		totalCount
+	}
 }
