@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloClient } from '@apollo/client';
 import { PageEvent } from '@angular/material/paginator';
 import {
 	AllBooksQuery,
@@ -8,6 +8,7 @@ import {
 	Book,
 } from '../../../generated/graphql';
 import { ApolloService } from '../../common/services/apollo-client-service';
+import { SpinnerService } from 'src/app/common/services/spinner-service';
 
 @Component({
 	selector: 'app-books-admin',
@@ -24,7 +25,10 @@ export class BooksAdminComponent implements OnInit {
 
 	public books: Book[] = [];
 
-	constructor(private apolloService: ApolloService) {
+	constructor(
+		private apolloService: ApolloService,
+		private spinnerService: SpinnerService
+	) {
 		this.client = this.apolloService.getClient();
 	}
 
@@ -39,6 +43,7 @@ export class BooksAdminComponent implements OnInit {
 	}
 
 	private reloadBooks(): void {
+		this.spinnerService.showSpinner();
 		this.client
 			.query<AllBooksQuery, AllBooksQueryVariables>({
 				query: AllBooksDocument,
@@ -52,6 +57,7 @@ export class BooksAdminComponent implements OnInit {
 					? result.data?.books?.totalCount
 					: 0;
 				this.books = result.data?.books?.nodes as Book[];
+				this.spinnerService.stopSpinner();
 			})
 			.catch((error) => {
 				console.error(error);

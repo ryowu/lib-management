@@ -2,11 +2,11 @@
 
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* Importing Bootstrap SCSS file. */
@@ -16,44 +16,49 @@ body {
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
 .container {
-  height: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 15px;
-  background-color: rgb(255, 255, 255);
+	height: auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 15px;
+	background-color: rgb(255, 255, 255);
 }
 
 .separator {
-  height: 10px;
-  background-color: rgb(255, 255, 255);
+	height: 10px;
+	background-color: rgb(255, 255, 255);
 }
 
 .page-title {
-  font-size: 32px;
-  font-weight: bold;
+	font-size: 32px;
+	font-weight: bold;
 }
 
 .page-sub-title {
-  font-size: 16px;
-  color: rgb(155, 155, 155);
-  text-transform: uppercase;
+	font-size: 16px;
+	color: rgb(155, 155, 155);
+	text-transform: uppercase;
 }
 
 .label-secondary {
-  font-size: 14px;
-  color: rgb(100, 100, 100);
+	font-size: 14px;
+	color: rgb(100, 100, 100);
 }
 
 .mat-icon {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 .icon-secondary {
-  color: rgb(100, 100, 100);
+	color: rgb(100, 100, 100);
 }
 
 .aligned-with-icon {
-  position: absolute;
-  margin-top: 2px;
-  margin-left: 5px; /* optional */
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 5px; /* optional */
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing.dark-backdrop {
+	background: #000;
+	opacity: 0.75 !important;
 }
