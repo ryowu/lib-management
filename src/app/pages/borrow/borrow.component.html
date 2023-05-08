@@ -8,42 +8,80 @@
 	<hr>
 
 	<div class="row">
-		<div class="col-6">
+		<div class="col-12">
 			<div class="row">
 				<div class="col-6">
-					<mat-form-field>
-						<mat-label>Library Card Number</mat-label>
+					<mat-form-field [style.width.px]=300>
+						<mat-label>Scan or input Library Card Number</mat-label>
 						<input matInput placeholder="AF0034667" value="">
 					</mat-form-field>
 				</div>
-				<div class="col-auto">
-					<button mat-flat-button color="primary" style="height: 48px; width: 120px;">Apply</button>
+				<div class="col-2">
+					<button mat-flat-button color="primary" style="height: 48px; width: 120px;"
+						(click)="applyUserName()">Apply</button>
+				</div>
+				<div class="col-4 mt-2">
+					<div class="row">
+						<div class="col-auto">{{userName}}</div>
+						<div class="col-auto mb-2" *ngIf="userName">
+							<h4><span class="badge text-bg-primary">Active</span></h4>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="ml-3 mr-3">
-				<mat-card>
-					<mat-card-header>
-						<mat-card-subtitle>Dog Breed</mat-card-subtitle>
-						<mat-card-title>Shiba Inu</mat-card-title>
-					</mat-card-header>
-					<mat-card-content>
-						<p>This card has divider and indeterminate progress as footer</p>
-						<p>test test test</p>
-						<mat-divider></mat-divider>
-					</mat-card-content>
-					<mat-card-actions>
-						<button mat-button>LIKE</button>
-						<button mat-button>SHARE</button>
-					</mat-card-actions>
-					<mat-card-footer>
-
-					</mat-card-footer>
-				</mat-card>
-			</div>
-
-		</div>
-		<div class="col-6">
-
 		</div>
 	</div>
+
+	<mat-grid-list cols="3" rowHeight="6:5">
+		<mat-grid-tile><mat-card class="mat-card-books">
+				<mat-card-header>
+					<mat-card-subtitle>Amelia Jacobs</mat-card-subtitle>
+					<mat-card-title>100 Fairy Tales</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>A collection of one hundred fairy tales from around the world.</p>
+					<p>Publish date: 2000-09-05</p>
+					<mat-divider></mat-divider>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-button>REMOVE</button>
+				</mat-card-actions>
+				<mat-card-footer>
+				</mat-card-footer>
+			</mat-card></mat-grid-tile>
+		<mat-grid-tile><mat-card class="mat-card-books">
+				<mat-card-header>
+					<mat-card-subtitle>Vincent Nguyen</mat-card-subtitle>
+					<mat-card-title>Road to Success</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>A self-help book aimed at helping readers achieve success in their personal and
+						professional lives.</p>
+					<p>Publish date: 2005-04-09</p>
+					<mat-divider></mat-divider>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-button>REMOVE</button>
+				</mat-card-actions>
+				<mat-card-footer>
+				</mat-card-footer>
+			</mat-card></mat-grid-tile>
+		<mat-grid-tile><mat-card class="mat-card-books">
+				<mat-card-header>
+					<mat-card-subtitle>Maya Patel</mat-card-subtitle>
+					<mat-card-title>Python 21days</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					<p>A beginner's guide to learning the Python programming language in 21 days.</p>
+					<p>Publish date: 2003-02-22</p>
+					<mat-divider></mat-divider>
+				</mat-card-content>
+				<mat-card-actions>
+					<button mat-button>REMOVE</button>
+				</mat-card-actions>
+				<mat-card-footer>
+				</mat-card-footer>
+			</mat-card></mat-grid-tile>
+		<mat-grid-tile>4</mat-grid-tile>
+	</mat-grid-list>
 </div>

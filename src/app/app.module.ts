@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -27,8 +28,8 @@ import { ReturnComponent } from './pages/return/return.component';
 		DashboardComponent,
 		AboutComponent,
 		BooksAdminComponent,
-  BorrowComponent,
-  ReturnComponent,
+		BorrowComponent,
+		ReturnComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -39,13 +40,14 @@ import { ReturnComponent } from './pages/return/return.component';
 		MatFormFieldModule,
 		MatIconModule,
 		MatInputModule,
+		MatGridListModule,
 		MatListModule,
 		MatPaginatorModule,
 		MatProgressSpinnerModule,
 		MatSidenavModule,
 		MatSlideToggleModule,
 		MatToolbarModule,
-    OverlayModule,
+		OverlayModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
