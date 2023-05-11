@@ -64,8 +64,15 @@ body {
 }
 
 .mat-card-books {
-	margin-top: 1px;
-	margin-bottom: 1px;
-	margin-left: 3px;
-	margin-right: 3px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 90%;
+	min-width: 288px;
+	min-height: 240px;
+}
+
+.mat-card-actions-books {
+	max-height: 32px;
 }

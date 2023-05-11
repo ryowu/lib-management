@@ -32,56 +32,44 @@
 		</div>
 	</div>
 
-	<mat-grid-list cols="3" rowHeight="6:5">
-		<mat-grid-tile><mat-card class="mat-card-books">
+	<div class="row">
+		<div class="col-4" *ngFor="let book of books; let i=index">
+			<mat-card class="mat-card-books">
 				<mat-card-header>
-					<mat-card-subtitle>Amelia Jacobs</mat-card-subtitle>
-					<mat-card-title>100 Fairy Tales</mat-card-title>
+					<mat-card-subtitle>{{ book.author }}</mat-card-subtitle>
+					<mat-card-title>{{ book.title }}</mat-card-title>
 				</mat-card-header>
-				<mat-card-content>
-					<p>A collection of one hundred fairy tales from around the world.</p>
-					<p>Publish date: 2000-09-05</p>
+				<mat-card-content style="height:auto">
+					<p>{{ book.description }}</p>
+					<p>Publish date: {{ book.publishDate }}</p>
 					<mat-divider></mat-divider>
 				</mat-card-content>
-				<mat-card-actions>
-					<button mat-button>REMOVE</button>
+				<mat-card-actions class="mat-card-actions-books">
+					<button mat-button (click)="removeBook(i)">REMOVE</button>
 				</mat-card-actions>
-				<mat-card-footer>
-				</mat-card-footer>
-			</mat-card></mat-grid-tile>
-		<mat-grid-tile><mat-card class="mat-card-books">
+			</mat-card>
+		</div>
+
+		<div class="col-4">
+			<mat-card class="mat-card-books">
 				<mat-card-header>
-					<mat-card-subtitle>Vincent Nguyen</mat-card-subtitle>
-					<mat-card-title>Road to Success</mat-card-title>
+					<mat-card-title>SCAN/ADD NEW BOOK</mat-card-title>
 				</mat-card-header>
-				<mat-card-content>
-					<p>A self-help book aimed at helping readers achieve success in their personal and
-						professional lives.</p>
-					<p>Publish date: 2005-04-09</p>
-					<mat-divider></mat-divider>
+				<mat-card-content style="text-align: center; height: 100%">
+					<button mat-icon-button (click)="addBook()">
+						<mat-icon>add_circle</mat-icon>
+					</button>
 				</mat-card-content>
-				<mat-card-actions>
-					<button mat-button>REMOVE</button>
-				</mat-card-actions>
-				<mat-card-footer>
-				</mat-card-footer>
-			</mat-card></mat-grid-tile>
-		<mat-grid-tile><mat-card class="mat-card-books">
-				<mat-card-header>
-					<mat-card-subtitle>Maya Patel</mat-card-subtitle>
-					<mat-card-title>Python 21days</mat-card-title>
-				</mat-card-header>
-				<mat-card-content>
-					<p>A beginner's guide to learning the Python programming language in 21 days.</p>
-					<p>Publish date: 2003-02-22</p>
-					<mat-divider></mat-divider>
-				</mat-card-content>
-				<mat-card-actions>
-					<button mat-button>REMOVE</button>
-				</mat-card-actions>
-				<mat-card-footer>
-				</mat-card-footer>
-			</mat-card></mat-grid-tile>
-		<mat-grid-tile>4</mat-grid-tile>
-	</mat-grid-list>
+			</mat-card>
+		</div>
+	</div>
+
 </div>
+
+<!-- <div class="row" style="position: fixed; bottom: 0; padding-left: 20px; padding-bottom: 20px; width: 100%;">
+	<div class="col-12">
+		<div class="row justify-content-end">
+			<button mat-raised-button color="accent">Confirm</button>
+		</div>
+	</div>
+</div> -->
