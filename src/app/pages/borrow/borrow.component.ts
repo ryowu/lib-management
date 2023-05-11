@@ -17,7 +17,7 @@ export class BorrowComponent {
 	public books: Book[] = [
 		{
 			author: 'J.K. Rowling',
-			title: "Harry Potter and the Philosopher's Stone",
+			title: "Harry Potter & Philosopher's Stone",
 			description:
 				'The first book in the Harry Potter series, in which Harry discovers the wizarding world and his place within it.',
 			publishDate: '1997-06-26',
