@@ -1,12 +1,172 @@
 <div class="container">
-    <div class="separator"></div>
+	<div class="row">
+		<div class="col-12">
+			<div class="mt-1 mb-3 page-title">Dashboard</div>
+			<div class="mt-3 page-sub-title">Data summary & news</div>
+		</div>
+	</div>
 
-    <div class="card">
-        <div class="card-header">
-            Books Overview
-        </div>
-        <div class="card-body">
-            Dsahboard content
-        </div>
-    </div>
+	<hr>
+
+	<div class="row">
+		<div class="col-4">
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header">
+							Books Overview
+						</div>
+						<div class="card-body">
+							<div class="row mb-2">
+								<div class="col-6">
+									All Books
+								</div>
+								<div class="col-6">
+									34
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">
+									Borrowed
+								</div>
+								<div class="col-6">
+									15
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">
+									Overdue
+								</div>
+								<div class="col-6">
+									3
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header">
+							Readers Overview
+						</div>
+						<div class="card-body">
+							<div class="row mb-2">
+								<div class="col-6">
+									All Readers
+								</div>
+								<div class="col-6">
+									6
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">
+									Borrowed books
+								</div>
+								<div class="col-6">
+									5
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-6">
+									Idle
+								</div>
+								<div class="col-6">
+									1
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mb-3">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header">
+							Opening hours
+						</div>
+						<div class="card-body">
+							<div class="row mb-2">
+								<div class="col-5">
+									Monday
+								</div>
+								<div class="col-7">
+									9:00 AM - 4:30 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Tuesday
+								</div>
+								<div class="col-7">
+									9:00 AM - 8:00 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Wednesday
+								</div>
+								<div class="col-7">
+									9:00 AM - 4:30 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Thursday
+								</div>
+								<div class="col-7">
+									9:00 AM - 8:00 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Friday
+								</div>
+								<div class="col-7">
+									9:00 AM - 4:30 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Saturday
+								</div>
+								<div class="col-7">
+									10:00 AM - 3:00 PM
+								</div>
+							</div>
+							<div class="row mb-2">
+								<div class="col-5">
+									Sunday
+								</div>
+								<div class="col-7">
+									Closed
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-8 mb-3">
+			<div class="list-group">
+				<a href="#" class="list-group-item" *ngFor="let item of news">
+					<div class="row">
+						<div class="col-9">
+							<h3>{{item.title}}</h3>
+							<div class="text-muted">{{item.description}}</div>
+						</div>
+						<div class="col-3 text-muted">
+							{{item.date | date: 'medium'}}
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
 </div>
