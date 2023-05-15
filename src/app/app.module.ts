@@ -21,6 +21,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { BooksAdminComponent } from './pages/books-admin/books-admin.component';
 import { BorrowComponent } from './pages/borrow/borrow.component';
 import { ReturnComponent } from './pages/return/return.component';
+import { BooksDetailComponent } from './pages/books-admin/books-detail/books-detail.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -30,11 +33,13 @@ import { ReturnComponent } from './pages/return/return.component';
 		BooksAdminComponent,
 		BorrowComponent,
 		ReturnComponent,
+		BooksDetailComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
+		CommonModule,
 		MatButtonModule,
 		MatCardModule,
 		MatFormFieldModule,
@@ -48,6 +53,7 @@ import { ReturnComponent } from './pages/return/return.component';
 		MatSlideToggleModule,
 		MatToolbarModule,
 		OverlayModule,
+		ReactiveFormsModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

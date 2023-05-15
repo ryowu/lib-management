@@ -1,0 +1,23 @@
+.edit-link {
+	text-decoration: none; /* Remove underline */
+	display: flex; /* Enable flexbox */
+	align-items: center; /* Center items vertically */
+	color: var(--primary); /* Set custom color */
+}
+
+.edit-link:hover {
+	text-decoration: none; /* Remove underline on hover */
+}
+
+.edit-link:hover .edit-icon {
+	color: rgb(37, 37, 214); /* Set color to blue on hover */
+}
+
+.edit-icon {
+	color: var(--primary); /* Set color to primary */
+}
+
+.id-text {
+	color: var(--primary); /* Set color to primary */
+	margin-left: 4px; /* Add some spacing between icon and text */
+}

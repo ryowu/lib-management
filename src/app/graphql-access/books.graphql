@@ -10,3 +10,14 @@ query AllBooks($first: Int, $offset: Int) {
 		totalCount
 	}
 }
+
+query GetBookById($id: Int!) {
+	book: bookById(id: $id) {
+		id
+		name
+		author
+		publishDate
+		status
+		description
+	}
+}
